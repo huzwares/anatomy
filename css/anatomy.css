@@ -497,10 +497,10 @@ section h2 {
   padding: 25px;
 }
 section h2:first-child {
-  padding-left: 0;
+  padding-right: 0;
 }
 section h2:last-child {
-  padding-right: 0;
+  padding-left: 0;
 }
 section a {
   color: black;
