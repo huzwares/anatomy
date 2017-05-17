@@ -494,7 +494,7 @@ section {
 section h2 {
   display: inline-block;
   font-size: 16px;
-  padding: 25px;
+  padding: 15px;
 }
 section h2:first-child {
   padding-right: 0;
