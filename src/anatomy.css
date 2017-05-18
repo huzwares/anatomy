@@ -4,7 +4,7 @@
 * based on Skeleton V2.0.4 by Dave Gamache. www.getskeleton.com
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 17 May 2017
+* 18 May 2017
 */
 
 
@@ -189,9 +189,6 @@
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Anatomy
-are based on 10px sizing. So basically 1.5rem = 15px •‿• */
 html {
   font-size: 62.5%; }
 body {
@@ -222,7 +219,7 @@ blockquote {
 }
 
 /* Larger than phablet */
-@media (min-width: 540px) {
+@media only screen and (min-width: 33.75em) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
@@ -415,7 +412,7 @@ th:last-child,
 td:last-child {
   padding-right: 0; }
 /* Larger than phablet */
-@media (min-width: 550px) {
+@media only screen and (min-width: 33.75em)) {
   th, td { padding: 12px 15px; }
 }
 
@@ -486,7 +483,6 @@ hr {
 /* Self Clearing Goodness */
 .container:after,
 .row:after,
-.panel:after,
 .u-cf {
   content: "";
   display: table;
