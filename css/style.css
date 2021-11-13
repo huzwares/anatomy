@@ -1,0 +1,16 @@
+:root {
+	--font-family: 'Space Mono', monospace;
+}
+
+header,
+main {
+	text-align: center;
+}
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 2rem;
+}
+main a:last-child {
+	grid-column: auto/span 4;
+}
