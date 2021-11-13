@@ -1,16 +1,27 @@
 :root {
-	--font-family: 'Space Mono', monospace;
+	--font-family: "Space Mono", monospace;
 }
 
 header,
-main {
+main,
+nav p {
 	text-align: center;
 }
-main {
+
+nav a {
+	padding: 0.5rem 0;
+}
+
+nav {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	row-gap: 2rem;
 }
-main a:last-child {
+
+nav p {
 	grid-column: auto/span 4;
+}
+
+#logo {
+	max-width: 40ch;
+	margin: auto;
 }

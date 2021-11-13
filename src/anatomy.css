@@ -4,7 +4,7 @@
 * Inspired and based on Skeleton V2.0.4 by Dave Gamache: http://getskeleton.com/ & Fluiditype by Boris Kirov: https://www.fluiditype.com/
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 13 Nov 2021
+* 14 Nov 2021
 */
 
 /* Table of contents
@@ -25,6 +25,7 @@
 	--line-height: calc(var(--font-size) * 1.4);
 	--letter-spacing: calc(var(--font-size) * 0.0015);
 	--font-weight: 300;
+	--main-color: #05161c;
 	--red: #eb5757;
 	--blue: #0004b3;
 	--light-blue: #b3d7ff; /* The color is the native browser highlight text color, to make the appeal of importance and focus on specific areas of the text.*/
@@ -46,6 +47,7 @@ body {
 	word-break: break-word;
 	font-variant-numeric: slashed-zero;
 	scroll-behavior: smooth;
+	color: var(--main-color);
 }
 
 body {
@@ -57,6 +59,10 @@ body {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+::selection {
+	background-color: var(--main-color);
+	color: var(--light-gray);
+}
 
 p,
 li,
