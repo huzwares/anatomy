@@ -1,10 +1,9 @@
 /*
-* Anatomy V2.0.0
-* Copyright 2021, Sina M. Omrani
-* Inspired and based on Skeleton V2.0.4 by Dave Gamache: http://getskeleton.com/ & Fluiditype by Boris Kirov: https://www.fluiditype.com/
+* Anatomy V2.1.0 by Sina M. Omrani
+* Inspired and based on Skeleton V2.0.4 by Dave Gamache: http://getskeleton.com/ , Fluiditype by Boris Kirov: https://www.fluiditype.com/ & Full-Bleed Layout Using CSS Grid by Joshua Comeau: https://www.joshwcomeau.com/css/full-bleed/
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 14 Nov 2021
+* 12 Oct 2022
 */
 
 /* Table of contents
@@ -32,7 +31,10 @@
 	--dark-gray: #282c35;
 	--light-gray: #f7f7f7;
 	--font-family: sans-serif;
-	--max-width: 80ch;
+	--gap: clamp(1rem, 6vw, 3rem);
+	--full: minmax(var(--gap), 1fr);
+	--content: min(80ch, 100% - var(--gap) * 2);
+	--feature: minmax(0, 6vw);
 }
 
 *,
@@ -50,11 +52,30 @@ body {
 	color: var(--main-color);
 }
 
-body {
+body,
+.wrapper {
 	width: 100%;
-	padding: 1em;
-	max-width: var(--max-width);
-	margin: auto;
+	display: grid;
+	grid-template-columns:
+		[full-start] var(--full)
+		[feature-start] var(--feature)
+		[content-start] var(--content) [content-end]
+		var(--feature) [feature-end]
+		var(--full) [full-end];
+}
+
+body > *,
+.wrapper > * {
+	grid-column: content;
+}
+
+.feature {
+	grid-column: feature;
+}
+
+.full,
+body > .wrapper {
+	grid-column: full;
 }
 
 /* Typography
@@ -143,7 +164,6 @@ pre {
 	overflow: auto;
 	padding: 2.5vw;
 	tab-size: 4;
-	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	white-space: pre-wrap;
 	word-break: break-all;
@@ -261,7 +281,6 @@ input[type="button"]:focus {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 input[type="email"],
 input[type="number"],
 input[type="search"],
