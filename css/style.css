@@ -1,5 +1,5 @@
 :root {
-	--font-family: "Space Mono", monospace;
+	--font-family: "Space Grotesk", sans-serif;
 }
 
 header {
@@ -12,14 +12,26 @@ nav a {
 
 nav {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 }
 
-nav p {
-	grid-column: auto/span 4;
+@media (min-width: 768px) {
+	nav {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }
 
 #logo {
 	max-width: 40ch;
 	margin: auto;
 }
+
+/* #logo > g {
+	fill: #05161c;
+}
+
+@media (prefers-color-scheme: dark) {
+	#logo > g {
+		fill: #fff;
+	}
+} */

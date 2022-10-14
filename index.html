@@ -15,8 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="application-name" content="anatomy">
 	<meta name="description" content="minimal css boilerplate for minimalists">
-	<meta name="robots" content="index,follow,noodp">
-	<meta name="googlebot" content="index,follow">
+	<meta name="color-scheme" content="dark light">
 	<meta name="subject" content="stylesheet">
 	<meta name="abstract" content="minimal css boilerplate for minimalists">
 	<meta name="url" content="https://sinaomrani.github.io/anatomy/">
@@ -44,25 +43,126 @@
 	<link rel="icon" type="image/png" href="img/fav/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="img/fav/favicon-16x16.png" sizes="16x16" />
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="src/anatomy.min.css">
+	<link rel="stylesheet" href="src/anatomy.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<header>
-		<img src="img/logo.svg" alt="logo" id="logo">
+		<svg id="logo" enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+			<g transform="translate(22.749 3.3869) translate(241.49,-134.43) matrix(1.2961,0,0,1.2961,-255.43,116.24)">
+				<path
+					d="m11.6 36.5c-0.5 0-1.0004 0.19961-1.4004 0.59961-0.8 0.8-0.8 2.0008 0 2.8008l10.102 10.1-10.102 10.1c-0.8 0.8-0.8 2.0008 0 2.8008 0.4 0.4 0.90039 0.59961 1.4004 0.59961s1.0004-0.19961 1.4004-0.59961l11-10.9h10.699v9.4004c0 1.1 0.9 2 2 2s2-0.9 2-2v-9.4004h13.301v9.4004c0 1.1 0.9 2 2 2s2-0.9 2-2v-9.4004h9.5v-4h-9.5v-9.4004c0-1.1-0.9-2-2-2s-2 0.9-2 2v9.4004h-13.4v-9.4004c0-1.1-0.9-2-2-2s-2 0.9-2 2v9.4004h-10.6l-11-10.9c-0.4-0.4-0.90039-0.59961-1.4004-0.59961zm58.379 0c-0.28041-0.01537-0.49756 0.01588-0.64258 0.09961-2.3203 1.3396-2.3203 25.453 0 26.793 2.3203 1.3396 23.203-10.717 23.203-13.396 1.2e-5 -2.5118-18.354-13.266-22.561-13.496zm12.088 9.4453c0.5 0 1.0004 0.20156 1.4004 0.60156 0.8 0.8 0.8 1.9988 0 2.7988l-0.59961 0.59961 0.59961 0.60156c0.8 0.8 0.8 1.9988 0 2.7988-0.4 0.4-0.90039 0.59961-1.4004 0.59961s-0.99844-0.19961-1.3984-0.59961l-0.60156-0.5-0.59961 0.59961c-0.4 0.4-0.90039 0.60156-1.4004 0.60156s-0.99844-0.20156-1.3984-0.60156c-0.8-0.8-0.8-1.9988 0-2.7988l0.59961-0.59961-0.59961-0.60156c-0.8-0.8-0.8-1.9988 0-2.7988s1.9988-0.8 2.7988 0l0.59961 0.5 0.60156-0.59961c0.4-0.4 0.89844-0.60156 1.3984-0.60156z" />
+			</g>
+		</svg>
 		<h1>anatomy.css</h1>
-		<h2 class="bigger-width">minimal boilerplate for minimalists.V2.1.0</h2>
+		<h2 class="bigger-width">minimal boilerplate for minimalists.V2.2.2</h2>
 		<nav>
 			<a href="https://github.com/sinaomrani/anatomy">github</a>
-			<a href="https://raw.githubusercontent.com/sinaomrani/anatomy/master/src/anatomy.css">downlaod</a>
 			<a href="mailto:sina.omrani@hotmail.com">feedback</a>
-			<p title="Donate DogeCoin if you want">DGU3xsWqaZbip4SiB51KhomLKijEKd6VSu</p>
+			<a href="https://raw.githubusercontent.com/sinaomrani/anatomy/master/src/anatomy.css">downlaod</a>
+			<a href="https://raw.githubusercontent.com/sinaomrani/anatomy/master/src/anatomy.min.css">downlaod(minified)</a>
+			<!-- <p title="Donate DogeCoin if you want">DGU3xsWqaZbip4SiB51KhomLKijEKd6VSu</p> -->
 		</nav>
 	</header>
+	<main class="wrapper">
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+		<hr />
+		<p>Fluiditype is a typography css framework, which can easily be added to any web-page. The magic is behind the calculations done while incorporate the
+			<code>vw</code> which stands for <code>viewport-width</code> and it is fully responsive and fluid to the size of the viewport.</p>
+		<blockquote>You want to understand and test how this setup works, it is easy. Just rescale the screen and you will se the typography starting to adjust.
+		</blockquote>
+		<p>Just a simple paragraph text, that way you can easily visualize the <mark>behavior</mark> when you change the viewport, the rescaling and fluidity in
+			action. This is a font type called Inter created for <a href="https://figma.com" target="_blank" rel="noopener noreferrer">Figma</a>, also used by
+			<a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a>. </p>
+		<ul>
+			<li><b>Bolded text</b></li>
+			<li><i>Italic text</i></li>
+			<li><strong>Strong text</strong></li>
+			<li><u>Underlined text</u></li>
+			<li><del>Strikethrough text</del></li>
+		</ul>
+		<hr />
+		<section class="two_column">
+			<div>
+				<h5>Unordered List</h5>
+				<ul>
+					<li>Item 1</li>
+					<li> Item 2 <ul>
+							<li>Item 2.1</li>
+							<li>Item 2.2</li>
+						</ul>
+					</li>
+					<li>Item 3</li>
+				</ul>
+			</div>
+			<div>
+				<h5>Ordered List</h5>
+				<ol>
+					<li>Item 1</li>
+					<li> Item 2 <ul>
+							<li>Item 2.1</li>
+							<li>Item 2.2</li>
+						</ul>
+					</li>
+					<li>Item 3</li>
+				</ol>
+			</div>
+		</section>
+		<hr />
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Sex</th>
+					<th>Location</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Dave Gamache</td>
+					<td>26</td>
+					<td>Male</td>
+					<td>San Francisco</td>
+				</tr>
+				<tr>
+					<td>Dwayne Johnson</td>
+					<td>42</td>
+					<td>Male</td>
+					<td>Hayward</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<form class="two_column">
+			<div>
+				<label for="exampleEmailInput">Your email</label>
+				<input type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+			</div>
+			<div>
+				<label for="exampleRecipientInput">Reason for contacting</label>
+				<select id="exampleRecipientInput">
+					<option value="Option 1">Questions</option>
+					<option value="Option 2">Admiration</option>
+					<option value="Option 3">Can I get your number?</option>
+				</select>
+			</div>
+			<div class="max">
+				<label for="exampleMessage">Message</label>
+				<textarea placeholder="Hi Dave …" id="exampleMessage"></textarea>
+			</div>
+			<input type="submit" value="Submit">
+		</form>
+	</main>
 </body>
 
 </html>

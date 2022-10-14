@@ -1,9 +1,9 @@
 /*
-* Anatomy V2.1.0 by Sina M. Omrani
-* Inspired and based on Skeleton V2.0.4 by Dave Gamache: http://getskeleton.com/ , Fluiditype by Boris Kirov: https://www.fluiditype.com/ & Full-Bleed Layout Using CSS Grid by Joshua Comeau: https://www.joshwcomeau.com/css/full-bleed/
+* Anatomy V2.2.2 by Sina M. Omrani
+* Inspired and based on Fluiditype by Boris Kirov: https://www.fluiditype.com/ & Full-Bleed Layout Using CSS Grid by Joshua Comeau: https://www.joshwcomeau.com/css/full-bleed/
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 12 Oct 2022
+* 14 Oct 2022
 */
 
 /* Table of contents
@@ -20,22 +20,34 @@
 /* Base
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-	--font-size: calc(12px + 0.698vw); /* The character count on */
+	--font-size: calc(12px + 0.5vw);
 	--line-height: calc(var(--font-size) * 1.4);
 	--letter-spacing: calc(var(--font-size) * 0.0015);
 	--font-weight: 300;
+	--background-color: #fff;
 	--main-color: #05161c;
 	--red: #eb5757;
 	--blue: #0004b3;
 	--light-blue: #b3d7ff; /* The color is the native browser highlight text color, to make the appeal of importance and focus on specific areas of the text.*/
 	--dark-gray: #282c35;
-	--light-gray: #f7f7f7;
+	--light-gray: #f5f5f5;
 	--font-family: sans-serif;
 	--gap: clamp(1rem, 6vw, 3rem);
 	--full: minmax(var(--gap), 1fr);
 	--content: min(80ch, 100% - var(--gap) * 2);
 	--feature: minmax(0, 6vw);
 }
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #05161c;
+		--main-color: #fff;
+		--blue: #b3d7ff;
+		--light-blue: #0004b3;
+		--dark-gray: #f5f5f5;
+		--light-gray: #282c35;
+	}
+} */
 
 *,
 *::after,
@@ -45,6 +57,7 @@
 
 html,
 body {
+	background-color: var(--background-color);
 	font-family: var(--font-family);
 	word-break: break-word;
 	font-variant-numeric: slashed-zero;
@@ -76,6 +89,17 @@ body > *,
 .full,
 body > .wrapper {
 	grid-column: full;
+}
+
+@media (min-width: 768px) {
+	.two_column {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: var(--gap);
+	}
+	.two_column .max {
+		grid-column: 1 / 3;
+	}
 }
 
 /* Typography
@@ -119,7 +143,7 @@ code {
 mark {
 	background: var(--light-blue);
 	padding: 0.05vw 0.4vw;
-	border-radius: 2px;
+	border-radius: 3px;
 	color: var(--dark-gray);
 	font-size: calc(var(--font-size) * 1.1);
 	letter-spacing: var(--letter-spacing);
@@ -133,7 +157,7 @@ blockquote {
 	font-size: calc(var(--font-size) * 1.1);
 	letter-spacing: var(--letter-spacing);
 	border-left: 4px solid var(--dark-gray);
-	border-radius: 2px;
+	border-radius: 3px;
 	padding: 2.5vw;
 	margin: 2%;
 	font-style: italic;
@@ -160,7 +184,7 @@ pre {
 	color: var(--light-gray);
 	display: block;
 	margin: 0 0 1.5625em;
-	border-radius: 4px;
+	border-radius: 3px;
 	overflow: auto;
 	padding: 2.5vw;
 	tab-size: 4;
@@ -246,22 +270,17 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	display: inline-block;
-	height: 38px;
-	padding: 0 30px;
+	padding: 1rem 2rem;
 	color: var(--dark-gray);
 	text-align: center;
-	font-size: 11px;
-	font-weight: 600;
-	line-height: 38px;
-	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 	text-decoration: none;
 	white-space: nowrap;
 	background-color: transparent;
-	border-radius: 4px;
+	border-radius: 3px;
 	border: 1px solid var(--light-gray);
 	cursor: pointer;
+	width: fit-content;
 }
 
 .button:hover,
@@ -290,12 +309,13 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-	height: 38px;
-	padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-	background-color: #fff;
+	padding: 0.5rem 0.75rem;
+	background-color: var(--background-color);
 	border: 1px solid var(--light-gray);
-	border-radius: 4px;
+	border-radius: 3px;
 	box-shadow: none;
+	display: block;
+	width: 100%;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -313,7 +333,8 @@ textarea {
 }
 
 textarea {
-	min-height: 75px;
+	min-height: 100px;
+	resize: vertical;
 }
 
 input[type="email"]:focus,
@@ -378,8 +399,9 @@ li {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 td,
 th {
-	text-align: left;
+	text-align: inherit;
 	border-bottom: 1px solid var(--light-gray);
+	padding: 3px;
 }
 
 td:first-child,
@@ -396,7 +418,7 @@ th:last-child {
 @media (min-width: 768px) {
 	td,
 	th {
-		padding: 12px 15px;
+		padding: 0.5rem 1rem;
 	}
 }
 
@@ -409,7 +431,8 @@ hr {
 	border-top: 1px solid var(--dark-gray);
 }
 
-img {
+img,
+hr {
 	display: block;
 	width: 100%;
 }
